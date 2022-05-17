@@ -10,27 +10,23 @@ class Program
     public static void Main(string[] args)
     {
         // This program guesses the correct number
-        int guess;
-        Random randomNumber = new Random();
-        int number = randomNumber.Next(1, 6);
+        int number;
 
         // input
-        Console.WriteLine("This program lets the user guess a number between 1-6");
-
         Console.WriteLine("");
-        Console.Write("Input a number between 1 and 6: ");
-        guess = Convert.ToInt32(Console.ReadLine());
+        Console.Write("Input a number to check if it's positive or negative: ");
+        number = Convert.ToInt32(Console.ReadLine());
 
         // process
         Console.WriteLine("");
-        if (guess == number)
+        if (number >= 0)
         {
-            Console.WriteLine("You are correct!");
+            Console.WriteLine("The number " + number + " is a positive number.");
         }
 
-        if (guess != number)
+        else
         {
-            Console.WriteLine("Answer is " + number + "! " + "Try again!");
+            Console.WriteLine("The number " + number + " is a negative number.");
         }
 
         Console.WriteLine("\nDone.");
